@@ -4,7 +4,8 @@
 1. Baixe o [Node.js](https://nodejs.org/en/) versão LTS
 2. Baixe o projeto: git clone `https://github.com/Samaraferreira/adote-pi.git`
 3. Entre na pasta: `cd adote-pi`
-4. Rode: `npm start` (vai abrir o projeto no navegador)
+4. Rode: `npm install` (vai baixar as dependencias)
+5. Rode: `npm start` (vai abrir o projeto no navegador)
 
 <h1>Como enviar alterações</h1>
 
