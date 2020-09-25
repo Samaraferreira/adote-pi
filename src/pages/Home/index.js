@@ -1,12 +1,17 @@
 import React from 'react';
 
 import './styles.css';
+import Header from '../../components/Header';
+import HeaderWithSubHeader from '../../components/HeaderWithSubHeader';
+import ImgMediaCard from '../../components/Cards/index';
 
 function Home() {
   return (
-    <div className="app">
-      <h1>HOME</h1>
-    </div>
+    <>
+      <HeaderWithSubHeader/>
+      <ImgMediaCard />
+
+    </>
   );
 }
 
