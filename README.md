@@ -1,4 +1,4 @@
-<h1>Como rodar o projeto</h1>
+<h1>Como executar o projeto</h1>
 
 
 1. Baixe o [Node.js](https://nodejs.org/en/) versão LTS
