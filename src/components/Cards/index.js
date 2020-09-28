@@ -10,6 +10,7 @@ import Typography from "@material-ui/core/Typography";
 import { findByLabelText } from "@testing-library/react";
 import { Box } from "@material-ui/core";
 import '../../App.css';
+import '../Cards/img-dog.svg'
 
 const useStyles = makeStyles({
   root: {
@@ -47,8 +48,8 @@ export default function ImgMediaCard() {
           component="img"
           alt="Dog"
           height="140"
-          image="http://www.w3.org/2000/svg"
-          title="Dog"
+          image="../Cards/img-dog.svg"
+          title="Image Dog"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">

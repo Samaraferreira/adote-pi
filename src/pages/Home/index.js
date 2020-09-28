@@ -8,8 +8,6 @@ import ImgMediaCard from '../../components/Cards/index';
 function Home() {
   return (
     <>
-      <HeaderWithSubHeader/>
-      <ImgMediaCard />
 
     </>
   );
