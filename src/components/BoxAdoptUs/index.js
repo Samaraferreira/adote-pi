@@ -5,9 +5,8 @@ import {
     Button,
     makeStyles, Box
 } from '@material-ui/core';
+import {ReactComponent as Banner} from '../../assets/img-banner.svg';
 
-
-import Header from '../Header';
 //import { findByLabelText } from '@testing-library/react';
 
 const useStyle = makeStyles((theme) => ({
@@ -25,6 +24,7 @@ const useStyle = makeStyles((theme) => ({
     direction:'row',
     fontFamily: 'Roboto',
     fontStyle: 'normal',
+    background: 'linear-gradient(45deg, #B8EBC8 30%, #8EE1EB 90%)',
     justifyContent: 'space-between',
     marginTop: '80px',
     marginLeft: '28px',
@@ -38,30 +38,29 @@ const useStyle = makeStyles((theme) => ({
     lineHeight: '28px',
   },
 
-  textAndButton: {
+  textAndImage: {
     display:'flex',
-    direction:'row'
   },
+
+  bannerImage: {
+    display: 'flex',
+    alignSelf: 'flex-end',
+  }
 }));
 
-function HeaderWithSubHeader() {
+function BoxAdoptUs() {
     const classes = useStyle();
     return (
         <React.Fragment>
-            <Header />
             <Box className={classes.headerWithSubHeaderContainer}>
-                <Box className={classes.textAndButton}>
-                    <Typography className={classes.textHeaderWithSubHeader}>
-                        Pets que aguardam adoção
-                    </Typography>
+                <Box className={classes.textAndImage}>
+                <Typography variant='h2' component='h2'> Encontre um verdadeiro amigo</Typography>
+                <Typography variant='p' component='p'> para compartilhar os melhores momentos</Typography>
+                <Banner className={classes.bannerImage} />
                 </Box>
-
-                <Button variant="outlined" className={classes.buttonStyle}>
-                  <i class="material-icons" >filter_alt</i>Filtrar
-                </Button>
             </Box>
         </React.Fragment>
     );
 }
 
-export default HeaderWithSubHeader;
+export default BoxAdoptUs;

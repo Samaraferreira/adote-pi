@@ -30,10 +30,11 @@ const useStyle = makeStyles((theme) => ({
       direction:'row',
       fontFamily: 'Roboto',
       fontStyle: 'normal',
-      justifyContent: 'space-between',
+      justifyContent: 'space-around',
       marginTop: '23px',
       marginLeft: '28px',
       marginRight: '28px',
+      marginBottom: '23px',
       alignItems: 'center',
 
   },
@@ -41,6 +42,7 @@ const useStyle = makeStyles((theme) => ({
       fontWeight: 'bold',
       fontSize: '28px',
       lineHeight: '33px',
+      color: '#555',
   },
   adoteContainer: {
       display:'flex',
