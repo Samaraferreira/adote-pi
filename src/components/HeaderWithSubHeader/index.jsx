@@ -50,8 +50,6 @@ function HeaderWithSubHeader() {
     const classes = useStyle();
     return (
         <React.Fragment>
-            <Header />
-            <Divider />
             <Box className={classes.headerWithSubHeaderContainer}>
                 <Box className={classes.textAndButton}>
                     <Typography className={classes.textHeaderWithSubHeader}>
