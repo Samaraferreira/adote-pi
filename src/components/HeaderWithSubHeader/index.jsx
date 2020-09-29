@@ -21,19 +21,21 @@ const useStyle = makeStyles((theme) => ({
   },
 
   headerWithSubHeaderContainer: {
+    maxWidth:'1100px',
     display:'flex',
     direction:'row',
     fontFamily: 'Roboto',
     fontStyle: 'normal',
     justifyContent: 'space-between',
-    marginTop: '80px',
-    marginLeft: '28px',
-    marginRight: '28px',
+    marginTop: '64px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    paddingLeft: '42px',
+    paddingRight: '42px',
     alignItems: 'center',
   },
 
   textHeaderWithSubHeader: {
-
     fontSize: '24px',
     lineHeight: '28px',
   },

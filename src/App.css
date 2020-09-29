@@ -33,3 +33,9 @@ body {
   margin-top: 50px;
   color: var(--title);
 }
+
+@media (min-width: 1000px) {
+  .container {
+    padding: 0;
+  }
+}

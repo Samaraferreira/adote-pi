@@ -9,30 +9,30 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { findByLabelText } from "@testing-library/react";
 import { Box } from "@material-ui/core";
+
 import '../../App.css';
-import '../Cards/img-dog.svg'
+import dogImg from '../../assets/dog.png'
 
 const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-    width:'323px',
-    top:'581px',
-    marginTop:'40px'
-  },
-
   containerPai: {
     display:'flex',
     flexWrap:'wrap',
     justifyContent:'center',
   },
 
+  root: {
+    maxWidth: '300px',
+    marginTop:'40px',
+    margin: '8px',
+  },
+
   ButtonContato: {
     textTransform:'none',
     background:'var(--gradient)',
     border: 0,
-    borderRadius: 3,
+    borderRadius: 4,
     color: 'white',
-    fontWeight:'bold',
+    fontWeight:'500',
     width:'100%'
   }
 });
@@ -47,8 +47,8 @@ export default function ImgMediaCard() {
         <CardMedia
           component="img"
           alt="Dog"
-          height="140"
-          image="../Cards/img-dog.svg"
+          height="300"
+          image={dogImg}
           title="Image Dog"
         />
         <CardContent>
@@ -71,8 +71,32 @@ export default function ImgMediaCard() {
         <CardMedia
           component="img"
           alt="Dog"
-          height="140"
-          image="../Cards/img-dog.svg"
+          height="300"
+          image={dogImg}
+          title="Image Dog"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            Lucky
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Macho - 8 meses
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button className={classes.ButtonContato} variant="contained">
+          Entrar em contato
+        </Button>
+      </CardActions>
+    </Card>
+    <Card className={classes.root}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          alt="Dog"
+          height="300"
+          image={dogImg}
           title="Image Dog"
         />
         <CardContent>
