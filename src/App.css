@@ -1,23 +1,35 @@
 :root {
+  --title: #323235;
   --background-color: #F9F9F9;
   --lighter-hover: #F3F3F4;
   --primary: #49B7C6;
   --gradient: linear-gradient(90deg, #8DE2A5 0%, rgba(69, 210, 230, 0.88) 100%);
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
   background: var(--background-color);
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
   padding: 0 24px;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 32px;
+  margin-top: 50px;
+  color: var(--title);
 }
