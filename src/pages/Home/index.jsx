@@ -3,6 +3,7 @@ import React from "react";
 import './styles.css';
 
 import Header from '../../components/Header';
+import Banner from '../../components/Banner';
 import Divider from '@material-ui/core/Divider';
 import BoxAdoptUs from '../../components/BoxAdoptUs';
 import ImgMediaCard from '../../components/Cards';
@@ -28,6 +29,7 @@ function Home() {
       <Divider />
       <main className="container">
         {/* <BoxAdoptUs /> */}
+        <Banner />
         <section className="categorias">
         <Router>
           <h2 className="title">Categorias</h2>
