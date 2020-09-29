@@ -6,6 +6,7 @@ import Header from '../../components/Header';
 import Divider from '@material-ui/core/Divider';
 import BoxAdoptUs from '../../components/BoxAdoptUs';
 import ImgMediaCard from '../../components/Cards';
+import HeaderWithX from '../../components/HeaderWithX';
 
 import dogImg from '../../assets/img-dog.svg';
 import birdImg from '../../assets/img-bird.svg';

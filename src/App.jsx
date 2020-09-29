@@ -34,7 +34,7 @@ function App() {
         <Modal />
         {/* <Home /> */}
         <ListPets />
-      </ModalContext.Provider> 
+      </ModalContext.Provider>
     </ThemeProvider>
   );
 }
