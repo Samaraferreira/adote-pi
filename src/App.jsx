@@ -32,9 +32,9 @@ function App() {
     <ThemeProvider theme={theme}>
       <ModalContext.Provider value={{ openModal, setOpenModal }}>
         <Modal />
-        {/* <Home /> */}
-        <ListPets />
-      </ModalContext.Provider> 
+        <Home />
+        {/* <ListPets /> */}
+      </ModalContext.Provider>
     </ThemeProvider>
   );
 }
