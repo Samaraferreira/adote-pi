@@ -66,6 +66,30 @@ export default function ImgMediaCard() {
         </Button>
       </CardActions>
     </Card>
+    <Card className={classes.root}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          alt="Dog"
+          height="140"
+          image="../Cards/img-dog.svg"
+          title="Image Dog"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            Lucky
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Macho - 8 meses
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button className={classes.ButtonContato} variant="contained">
+          Entrar em contato
+        </Button>
+      </CardActions>
+    </Card>
   </Box>
   );
 }

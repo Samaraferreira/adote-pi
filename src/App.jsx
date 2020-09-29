@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.css';
 
-import Home from './pages/Home';
+import ListPets from './pages/ListPets';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core';
 
 
@@ -22,9 +22,10 @@ function App() {
       }
     },
   });
+
   return (
     <ThemeProvider theme={theme}>
-        <Home />
+        <ListPets />
     </ThemeProvider>
   );
 }

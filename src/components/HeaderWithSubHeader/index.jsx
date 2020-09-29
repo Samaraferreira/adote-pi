@@ -3,11 +3,11 @@ import 'fontsource-roboto';
 import {
     Typography,
     Button,
-    makeStyles, Box
+    makeStyles, Box, Divider
 } from '@material-ui/core';
 
-
 import Header from '../Header';
+
 //import { findByLabelText } from '@testing-library/react';
 
 const useStyle = makeStyles((theme) => ({
@@ -49,6 +49,7 @@ function HeaderWithSubHeader() {
     return (
         <React.Fragment>
             <Header />
+            <Divider />
             <Box className={classes.headerWithSubHeaderContainer}>
                 <Box className={classes.textAndButton}>
                     <Typography className={classes.textHeaderWithSubHeader}>
