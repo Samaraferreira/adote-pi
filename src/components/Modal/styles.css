@@ -1,0 +1,36 @@
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(250, 250, 250, 0.96);
+  position: fixed;
+  top: 0;
+  right: 0;
+  backface-visibility: hidden;
+  opacity: 0;
+  display: none;
+  transition: opacity .6s;
+}
+
+.modal-active {
+  opacity: 1;
+  display: block;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+.btn-close {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .modal-container {
+    max-width: 400px;
+  }
+}

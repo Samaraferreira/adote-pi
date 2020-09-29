@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext }  from 'react';
+import { ModalContext } from '../../App';
 
 import './styles.css';
 import 'fontsource-roboto';
@@ -56,6 +57,7 @@ const useStyle = makeStyles((theme) => ({
 
 function Header() {
   const classes = useStyle();
+  const { setOpenModal } = useContext(ModalContext);
 
     return (
         <Box className={classes.headerContainer}>
@@ -65,7 +67,7 @@ function Header() {
                 </Typography>
                 <Typography className={classes.textHeader} style={{color:'#7ADDDD'}}>.</Typography>
             </Box>
-            <Button variant="contained" color="primary" className={classes.buttonStyle}>Quero doar</Button>
+            <Button onClick={() => setOpenModal(true)} variant="contained" color="primary" className={classes.buttonStyle}>Quero doar</Button>
         </Box>
     );
 }

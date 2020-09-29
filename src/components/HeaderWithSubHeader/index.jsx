@@ -60,7 +60,7 @@ function HeaderWithSubHeader() {
                 </Box>
 
                 <Button variant="outlined" className={classes.buttonStyle}>
-                  <i class="material-icons" >filter_alt</i>Filtrar
+                  <i className="material-icons" >filter_alt</i>Filtrar
                 </Button>
             </Box>
         </React.Fragment>

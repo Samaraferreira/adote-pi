@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState, createContext } from 'react';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core';
 
 import './App.css';
 
 import ListPets from './pages/ListPets';
-import { ThemeProvider, createMuiTheme } from '@material-ui/core';
+import Modal from './components/Modal';
 
+export const ModalContext = createContext()
 
 function App() {
+  const [openModal, setOpenModal] = useState(false);
 
   const theme = createMuiTheme({
     palette: {
@@ -25,7 +28,10 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <ModalContext.Provider value={{ openModal, setOpenModal }}>
+        <Modal />
         <ListPets />
+      </ModalContext.Provider> 
     </ThemeProvider>
   );
 }
