@@ -19,7 +19,7 @@ function Home() {
       <Header />
       <Divider />
       <main className="container">
-        <BoxAdoptUs />
+        {/* <BoxAdoptUs /> */}
         <section className="categorias">
           <h2 className="title">Categorias</h2>
           <div className="cards">

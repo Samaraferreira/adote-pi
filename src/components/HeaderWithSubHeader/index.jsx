@@ -30,8 +30,8 @@ const useStyle = makeStyles((theme) => ({
     marginTop: '64px',
     marginLeft: 'auto',
     marginRight: 'auto',
-    paddingLeft: '42px',
-    paddingRight: '42px',
+    paddingLeft: '28px',
+    paddingRight: '28px',
     alignItems: 'center',
   },
 

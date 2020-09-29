@@ -3,7 +3,9 @@ import { ThemeProvider, createMuiTheme } from '@material-ui/core';
 
 import './App.css';
 
+import Home from './pages/Home';
 import ListPets from './pages/ListPets';
+
 import Modal from './components/Modal';
 
 export const ModalContext = createContext()
@@ -30,6 +32,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <ModalContext.Provider value={{ openModal, setOpenModal }}>
         <Modal />
+        {/* <Home /> */}
         <ListPets />
       </ModalContext.Provider> 
     </ThemeProvider>
