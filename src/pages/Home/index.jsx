@@ -1,26 +1,25 @@
 import React from "react";
-
-import './styles.css';
-
-import Header from '../../components/Header';
-import Banner from '../../components/Banner';
-import Divider from '@material-ui/core/Divider';
-import BoxAdoptUs from '../../components/BoxAdoptUs';
-import ImgMediaCard from '../../components/Cards';
-import HeaderWithX from '../../components/HeaderWithX';
-
-import dogImg from '../../assets/img-dog.svg';
-import birdImg from '../../assets/img-bird.svg';
-import catImg from '../../assets/img-cat.svg';
-import hamsterImg from '../../assets/img-hamster.svg';
-import adoptImg from '../../assets/adopt.svg';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
-import ListPets from '../ListPets'
+
+import { Divider } from '@material-ui/core';
+
+import Header from '../../components/Header';
+import Banner from '../../components/Banner';
+
+import dogImg from '../../assets/img-dog.svg';
+import birdImg from '../../assets/img-bird.svg';
+import catImg from '../../assets/img-cat.svg';
+import hamsterImg from '../../assets/img-hamster.svg';
+import adoptImg from '../../assets/adopt.svg';
+
+import ListPets from '../ListPets';
+
+import './styles.css';
 
 function Home() {
   return (
@@ -28,51 +27,50 @@ function Home() {
       <Header />
       <Divider />
       <main className="container">
-        {/* <BoxAdoptUs /> */}
         <Banner />
         <section className="categorias">
-        <Router>
-          <h2 className="title">Categorias</h2>
-          <div className="cards">
-              <div className="item_cards dog">
+          <Router>
+            <h2 className="title">Categorias</h2>
+            <div className="cards">
               <Link to="/cachorros" style={{ textDecoration: 'none', color: '#333' }}>
+                <div className="item_cards dog">
                   <img src={dogImg} alt="Cachorro" />
                   <h3 className="descricao">Cachorros</h3>
-                  </Link>
-              </div>
-              <div className="item_cards cat">
+                </div>
+              </Link>
               <Link to="/gatos" style={{ textDecoration: 'none', color: '#333' }}>
+                <div className="item_cards cat">
                   <img src={catImg} alt="Gato" />
-                <h3 className="descricao">Gatos</h3>
-                </Link>  
-              </div>
-              <div className="item_cards bird">
+                  <h3 className="descricao">Gatos</h3>
+                </div>
+              </Link>
               <Link to="/passaros" style={{ textDecoration: 'none', color: '#333' }}>
+                <div className="item_cards bird">
                   <img src={birdImg} alt="Passaros" />
                   <h3 className="descricao">Pássaros</h3>
-              </Link>    
-              </div>
-              <div className="item_cards other">
+                </div>
+              </Link>
               <Link to="/outros"style={{ textDecoration: 'none', color: '#333' }}>
+                <div className="item_cards other">
                   <img src={hamsterImg} alt="Outros" />
                   <h3 className="descricao">Outros</h3>
-              </Link>    
-              </div>
-          </div>
-          <Switch>
-          <Route exact path="/cachorros">
-            <ListPets />
-          </Route>
-          <Route path="/gatos">
-          <ListPets />
-          </Route>
-          <Route path="/passaros">
-          <ListPets />
-          </Route>
-          <Route path="/outros">
-          <ListPets />
-          </Route>
-        </Switch>
+                </div>
+              </Link>
+            </div>
+            <Switch>
+              <Route exact path="/cachorros">
+                <ListPets />
+              </Route>
+              <Route path="/gatos">
+                <ListPets />
+              </Route>
+              <Route path="/passaros">
+                <ListPets />
+              </Route>
+              <Route path="/outros">
+                <ListPets />
+              </Route>
+            </Switch>
           </Router>
         </section>
         <section className="infos">

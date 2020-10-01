@@ -1,14 +1,15 @@
 import React, { useContext }  from 'react';
-import { ModalContext } from '../../App';
-
-import './styles.css';
-import 'fontsource-roboto';
 import {
     Typography,
     Button,
     makeStyles,
     Box
 } from '@material-ui/core';
+import 'fontsource-roboto';
+
+import { ModalContext } from '../../App';
+
+import './styles.css';
 
 const useStyle = makeStyles((theme) => ({
 

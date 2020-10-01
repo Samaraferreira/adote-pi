@@ -8,7 +8,7 @@ import Card from '../../components/Cards';
 function Home() {
   return (
     <React.Fragment>
-       <HeaderWithSubHeader />
+      <HeaderWithSubHeader />
       <main className="container">
         <Card />
       </main>

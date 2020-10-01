@@ -1,7 +1,8 @@
 import React from 'react';
 
-import './styles.css';
 import bannerImg from '../../assets/img-banner.svg';
+
+import './styles.css';
 
 function Banner() {
   return (

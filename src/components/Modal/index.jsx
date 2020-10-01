@@ -1,4 +1,5 @@
 import React, { useContext }  from 'react';
+
 import { ModalContext } from '../../App';
 
 import closeIcon from '../../assets/icons/icon-close.svg';
