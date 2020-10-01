@@ -9,8 +9,6 @@ import 'fontsource-roboto';
 
 import { ModalContext } from '../../App';
 
-import './styles.css';
-
 const useStyle = makeStyles((theme) => ({
 
   buttonStyle: {
