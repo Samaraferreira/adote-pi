@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -22,6 +22,8 @@ import ListPets from '../ListPets';
 import './styles.css';
 
 function Home() {
+  const [category, setCategory] = useState('');
+
   return (
     <React.Fragment>
       <Header />
@@ -32,25 +34,25 @@ function Home() {
           <Router>
             <h2 className="title">Categorias</h2>
             <div className="cards">
-              <Link to="/cachorros" style={{ textDecoration: 'none', color: '#333' }}>
+              <Link to="/pets" onClick={() => setCategory('dog')} style={{ textDecoration: 'none', color: '#333' }}>
                 <div className="item_cards dog">
                   <img src={dogImg} alt="Cachorro" />
                   <h3 className="descricao">Cachorros</h3>
                 </div>
               </Link>
-              <Link to="/gatos" style={{ textDecoration: 'none', color: '#333' }}>
+              <Link to="/pets" onClick={() => setCategory('cat')} style={{ textDecoration: 'none', color: '#333' }}>
                 <div className="item_cards cat">
                   <img src={catImg} alt="Gato" />
                   <h3 className="descricao">Gatos</h3>
                 </div>
               </Link>
-              <Link to="/passaros" style={{ textDecoration: 'none', color: '#333' }}>
+              <Link to="/pets" onClick={() => setCategory('bird')} style={{ textDecoration: 'none', color: '#333' }}>
                 <div className="item_cards bird">
                   <img src={birdImg} alt="Passaros" />
                   <h3 className="descricao">Pássaros</h3>
                 </div>
               </Link>
-              <Link to="/outros"style={{ textDecoration: 'none', color: '#333' }}>
+              <Link to="/pets" onClick={() => setCategory('other')} style={{ textDecoration: 'none', color: '#333' }}>
                 <div className="item_cards other">
                   <img src={hamsterImg} alt="Outros" />
                   <h3 className="descricao">Outros</h3>
@@ -58,17 +60,8 @@ function Home() {
               </Link>
             </div>
             <Switch>
-              <Route exact path="/cachorros">
-                <ListPets />
-              </Route>
-              <Route path="/gatos">
-                <ListPets />
-              </Route>
-              <Route path="/passaros">
-                <ListPets />
-              </Route>
-              <Route path="/outros">
-                <ListPets />
+              <Route path="/pets">
+                <ListPets category={category} />
               </Route>
             </Switch>
           </Router>
