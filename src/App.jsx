@@ -4,14 +4,16 @@ import { ThemeProvider, createMuiTheme } from '@material-ui/core';
 import './App.css';
 
 import Home from './pages/Home';
-import ListPets from './pages/ListPets';
 
 import Modal from './components/Modal';
+import ModalMap from './components/ModalMap';
 
 export const ModalContext = createContext()
 
 function App() {
   const [openModal, setOpenModal] = useState(false);
+  const [openMapModal, setOpenMapModal] = useState(false);
+  const [selectedPet, setSelectedPet] = useState({});
 
   const theme = createMuiTheme({
     palette: {
@@ -30,10 +32,10 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <ModalContext.Provider value={{ openModal, setOpenModal }}>
+      <ModalContext.Provider value={{ openModal, setOpenModal, openMapModal, setOpenMapModal, selectedPet, setSelectedPet }}>
         <Modal />
-         <Home />
-        {/* <ListPets /> */}
+        <ModalMap />
+        <Home />
       </ModalContext.Provider>
     </ThemeProvider>
   );

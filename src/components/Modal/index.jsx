@@ -3,6 +3,7 @@ import React, { useState, useContext, useMemo }  from 'react';
 import { createPet } from '../../services/api';
 
 import { ModalContext } from '../../App';
+import HeaderWithX from '../HeaderWithX';
 
 import avatarImage from '../../assets/thumb.svg';
 import closeIcon from '../../assets/icons/icon-close.svg';
@@ -41,12 +42,13 @@ function Modal() {
 
   return (
     <section className={`modal-container ${openModal && 'modal-active' } `}>
-      <header className="modal-header">
+      {/* <header className="modal-header">
         <h2>Cadastrar novo pet</h2>
         <button onClick={() => setOpenModal(false)} className="btn-close">
           <img src={closeIcon} alt="fechar"/>
         </button>
-      </header>
+      </header> */}
+      <HeaderWithX close={setOpenModal} />
       <main>
         <form onSubmit={handleNewPet}>
           <div id="input-file">

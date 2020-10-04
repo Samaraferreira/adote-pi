@@ -1,0 +1,77 @@
+.janelaModal {
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  position: fixed;
+  background: #FBFBFB;
+  border: 1px solid #EBEBF1;
+
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+
+  border-radius: 8px;
+  backface-visibility: hidden;
+  opacity: 0;
+  display: none;
+
+}
+
+.modal-map-active {
+  opacity: 1;
+  display: block;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 32px;
+}
+
+.info h1 {
+  font-weight: 500;
+  font-size: 1.5em;
+  color: #727175;
+}
+
+.nomePet{
+  color: #AAE8E8;
+}
+
+.info img{
+  width: 70%;
+  margin: 15px 0;
+}
+
+.Botao{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background-image: linear-gradient( to right, #8BE2A6, #5BD7E7 );
+}
+
+.Botao img{
+  margin-right: 8px;
+}
+
+.Botao p{
+  font-weight: 600;
+  color: white;
+}
+
+@media (min-width: 600px) {
+  .janelaModal {
+    width: 600px;
+    height: 80vh;
+    top: 12%;
+    left: -50%;
+    right: -50%;
+  }
+}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Card,
@@ -9,11 +9,13 @@ import {
   Button,
   Typography,
   Box,
-  CircularProgress
+  CircularProgress,
+  Link
 } from "@material-ui/core";
 
+import { ModalContext } from '../../App';
+
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
-import dogImg from '../../assets/dog.png';
 
 import '../../App.css';
 
@@ -43,8 +45,14 @@ const useStyles = makeStyles({
 
 export default function Cards({ pets, loading }) {
   const classes = useStyles();
+  const { setOpenMapModal, setSelectedPet } = useContext(ModalContext);
 
   function handleWhatsapp(phone) {
+  }
+
+  function handleSelectPet(pet) {
+    setSelectedPet(pet);
+    setOpenMapModal(true);
   }
 
   return (
@@ -71,6 +79,11 @@ export default function Cards({ pets, loading }) {
                       </Typography>
                       <Typography variant="body2" color="textSecondary" component="p">
                         {pet.sex}
+                      </Typography>
+                      <Typography variant="body2" color="textSecondary" component="p">
+                        <Link onClick={() => handleSelectPet(pet)}>
+                          Ver localização
+                        </Link>
                       </Typography>
                     </CardContent>
                   </CardActionArea>

@@ -4,7 +4,8 @@ import {
     Typography,
     makeStyles, Box, Divider
 } from '@material-ui/core';
-import CloseIcon from '../../assets/icons/icon-close.svg';
+
+import closeIcon from '../../assets/icons/icon-close.svg';
 
 //import { findByLabelText } from '@testing-library/react';
 
@@ -39,7 +40,7 @@ const useStyle = makeStyles((theme) => ({
 }
 }));
 
-function HeaderWithX() {
+function HeaderWithX({ close }) {
     const classes = useStyle();
     return (
       <React.Fragment>
@@ -51,7 +52,9 @@ function HeaderWithX() {
               <Typography className={classes.textHeaderWithX} style={{color:'#7ADDDD'}}>.</Typography>
           </Box>
           {/* <i className="material-icons">CloseIcon</i> */}
-          <img src={CloseIcon} alt={'Fechar'}></img>
+          <button onClick={() => close(false)} className="btn-close">
+            <img src={closeIcon} alt="fechar"/>
+          </button>
         </Box>
       </React.Fragment>
     );
