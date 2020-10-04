@@ -34,3 +34,35 @@
     max-width: 400px;
   }
 }
+
+#input-file {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 2.4rem;
+}
+
+#input-file .avatar-image {
+  background-size: cover;
+  width: 8rem;
+  height: 8rem;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+}
+
+#input-file input {
+  width: 0.1px;
+  visibility: hidden;
+  z-index: -1;
+}
+
+#input-file .upload-label {
+  font-weight: 500;
+  padding: 0.8rem;
+  margin-left: 0.8rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  color: var(--text) !important;
+  background-color: var(--primary);
+}
