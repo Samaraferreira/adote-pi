@@ -6,7 +6,7 @@ import './App.css';
 import Home from './pages/Home';
 
 import Modal from './components/Modal';
-import ModalMap from './components/ModalMap';
+import ModalMap from './components/modalMap';
 
 export const ModalContext = createContext()
 
