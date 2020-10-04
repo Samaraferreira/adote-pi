@@ -9,19 +9,15 @@ import { getPetsByCategory } from "../../services/api";
 
 function ListPets({ category }) {
   const [pets, setPets] = useState([]);
-  // const [category, setCategory] = useState('');
-  // const query = useQuery();
-
-  // function useQuery() {
-  //   return new URLSearchParams(useLocation().search);
-  // }
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function loadPets() {
-      // const category = query.get("category");
+      setLoading(true);
       const data = await getPetsByCategory(category);
-      console.log(data)
+
       setPets(data);
+      setLoading(false);
     }
 
     loadPets();
@@ -31,7 +27,7 @@ function ListPets({ category }) {
     <React.Fragment>
       <HeaderWithSubHeader />
       <main className="container">
-        <Card pets={pets} />
+        <Card pets={pets} loading={loading} />
       </main>
     </React.Fragment>
   );

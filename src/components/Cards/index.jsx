@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Card,
@@ -8,7 +8,8 @@ import {
   CardMedia,
   Button,
   Typography,
-  Box
+  Box,
+  CircularProgress
 } from "@material-ui/core";
 
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
@@ -40,49 +41,51 @@ const useStyles = makeStyles({
   }
 });
 
-export default function Cards({ pets }) {
+export default function Cards({ pets, loading }) {
   const classes = useStyles();
 
   function handleWhatsapp(phone) {
-    return
   }
 
   return (
     <Box className={classes.containerPai}>
-      {pets.length > 0
-        ? (pets.map(pet => (
-            <Card key={pet._id} className={classes.root}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  alt={pet.type}
-                  height="300"
-                  image={pet.avatar_url}
-                  title={pet.type}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    {pet.name}
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                    {pet.age}
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                    {pet.sex}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button onClick={() => handleWhatsapp(pet.whatsapp)} className={classes.ButtonContato} variant="contained" startIcon={<WhatsAppIcon />}>
-                  Entrar em contato
-                </Button>
-              </CardActions>
-            </Card>
-        )))
-        : (
-          <Typography variant="h6" color="textSecondary" component="h2">
-            Nenhum pet nessa categoria
-          </Typography>
+      {loading
+        ? <CircularProgress color="secondary" />
+        : (pets.length > 0
+            ? (pets.map(pet => (
+                <Card key={pet._id} className={classes.root}>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      alt={pet.type}
+                      height="300"
+                      image={pet.avatar_url}
+                      title={pet.type}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        {pet.name}
+                      </Typography>
+                      <Typography variant="body2" color="textSecondary" component="p">
+                        {pet.age}
+                      </Typography>
+                      <Typography variant="body2" color="textSecondary" component="p">
+                        {pet.sex}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button onClick={() => handleWhatsapp(pet.whatsapp)} className={classes.ButtonContato} variant="contained" startIcon={<WhatsAppIcon />}>
+                      Entrar em contato
+                    </Button>
+                  </CardActions>
+                </Card>
+            )))
+            : (
+              <Typography variant="h6" color="textSecondary" component="h2">
+                Nenhum pet nessa categoria
+              </Typography>
+            )
         )
       }
     </Box>
