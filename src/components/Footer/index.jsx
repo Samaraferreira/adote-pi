@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles.css';
 
-import coracao from '../../assets/icons/coracao.png'
+import heart from '../../assets/icons/icon-heart.svg'
 
 function Footer() {
   return (
@@ -11,7 +11,7 @@ function Footer() {
       </div>
       <div className="ftexto">
         <p>Feito com</p>
-        <img src={coracao}/>
+        <img src={heart}/>
       </div>
     </footer>
   );

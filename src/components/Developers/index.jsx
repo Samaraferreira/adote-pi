@@ -2,8 +2,8 @@ import React from 'react';
 
 import './styles.css';
 
-import linkedin from '../../assets/linkedin.png';
-import github from '../../assets/github-logo.png';
+import linkedin from '../../assets/icons/icon-linkedin.svg';
+import github from '../../assets/icons/icon-github.svg';
 import leo from '../../assets/Leo.png';
 import arthur from '../../assets/Arthur.png';
 import samara from '../../assets/Samara.png';
@@ -18,32 +18,32 @@ function Devs() {
               <img src={angelica} alt=""/>
               <h3>Angelica</h3>
               <div className="redes">
-                  <a href="#" target="blanck"><img src={github} alt="" /></a>
-                  <a href="#" target="blanck"><img src={linkedin} alt="" /></a>
+                  <a href="https://github.com/angelicaacevedo" target="_blanck"><img src={github} alt="GitHub" /></a>
+                  <a href="https://www.linkedin.com/in/angelicaaceroacevedo/" target="_blanck"><img src={linkedin} alt="LinkedIn" /></a>
               </div>
           </div>
           <div className="cardDev">
               <img src={arthur} alt=""/>
               <h3>Arthur</h3>
               <div className="redes">
-                  <a href="#" target="blanck"><img src={github} alt="" /></a>
-                  <a href="#" target="blanck"><img src={linkedin} alt="" /></a>
+                  <a href="https://github.com/arthfgp" target="_blanck"><img src={github} alt="GitHub" /></a>
+                  <a href="#" target="_blanck"><img src={linkedin} alt="LinkedIn" /></a>
               </div>
           </div>
           <div className="cardDev">
               <img src={leo} alt=""/>
               <h3>Leonardo</h3>
               <div className="redes">
-                  <a href="#" target="blanck"><img src={github} alt="" /></a>
-                  <a href="#" target="blanck"><img src={linkedin} alt="" /></a>
+                  <a href="https://github.com/leorjr" target="_blanck"><img src={github} alt="GitHub" /></a>
+                  <a href="#" target="_blanck"><img src={linkedin} alt="LinkedIn" /></a>
               </div>
           </div>
           <div className="cardDev">
               <img src={samara} alt=""/>
               <h3>Samara</h3>
               <div className="redes">
-                  <a href="https://github.com/Samaraferreira" target="blanck"><img src={github} alt="" /></a>
-                  <a href="www.linkedin.com/in/samarafer" target="blanck"><img src={linkedin} alt="" /></a>
+                  <a href="https://github.com/Samaraferreira" target="_blanck"><img src={github} alt="GitHub" /></a>
+                  <a href="https://www.linkedin.com/in/samarafer" target="_blanck"><img src={linkedin} alt="LinkedIn" /></a>
               </div>
           </div>
       </div>
