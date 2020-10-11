@@ -10,6 +10,8 @@ import { Divider } from '@material-ui/core';
 
 import Header from '../../components/Header';
 import Banner from '../../components/Banner';
+import Developers from '../../components/Developers';
+import Footer from '../../components/Footer';
 
 import dogImg from '../../assets/img-dog.svg';
 import birdImg from '../../assets/img-bird.svg';
@@ -81,7 +83,9 @@ function Home() {
             <img src={adoptImg} alt="Adote" />
           </div>
         </section>
+        <Developers />
       </main>
+      <Footer />
     </React.Fragment>
   );
 }

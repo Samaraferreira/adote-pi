@@ -30,7 +30,7 @@ const useStyle = makeStyles((theme) => ({
     marginTop: '64px',
     marginLeft: 'auto',
     marginRight: 'auto',
-    paddingLeft: '28px',
+    paddingLeft: '8px',
     paddingRight: '28px',
     alignItems: 'center',
   },
@@ -38,6 +38,7 @@ const useStyle = makeStyles((theme) => ({
   textHeaderWithSubHeader: {
     fontSize: '24px',
     lineHeight: '28px',
+    fontWeight: '500'
   },
 
   textAndButton: {
@@ -57,9 +58,9 @@ function HeaderWithSubHeader() {
                     </Typography>
                 </Box>
 
-                <Button variant="outlined" className={classes.buttonStyle}>
+                {/* <Button variant="outlined" className={classes.buttonStyle}>
                   <i className="material-icons" >filter_alt</i>Filtrar
-                </Button>
+                </Button> */}
             </Box>
         </React.Fragment>
     );

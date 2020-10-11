@@ -16,8 +16,9 @@ import {
 import { ModalContext } from '../../App';
 
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import IconPet from '../../assets/icons/icon-pet.svg';
 
-import '../../App.css';
+import './styles.css';
 
 const useStyles = makeStyles({
   containerPai: {
@@ -25,13 +26,11 @@ const useStyles = makeStyles({
     flexWrap:'wrap',
     justifyContent:'center',
   },
-
   root: {
     maxWidth: '300px',
     marginTop:'40px',
     margin: '8px',
   },
-
   ButtonContato: {
     textTransform:'none',
     background:'var(--gradient)',
@@ -95,9 +94,10 @@ export default function Cards({ pets, loading }) {
                 </Card>
             )))
             : (
-              <Typography variant="h6" color="textSecondary" component="h2">
-                Nenhum pet nessa categoria
-              </Typography>
+              <div className="container-info">
+                <img src={IconPet} alt="pet" />
+                <h3>Nenhum pet nesta categoria</h3>
+              </div>
             )
         )
       }

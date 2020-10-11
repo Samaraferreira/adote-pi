@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container-devs {
+  padding: 20px;
+}
+
+.devs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cardDev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardDev img {
+  width: 200px;
+}
+
+.cardDev h3{
+  font-size: 1.8em;
+  color: #323235;
+}
+
+.redes img {
+  width: 48px;
+  padding: 10px;
+}
+
