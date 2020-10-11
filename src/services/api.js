@@ -12,11 +12,7 @@ export const getPetsByCategory = async (category) => {
 
 export const createPet = async (pet) => {
   try {
-    const response = await fetch(`${baseURL}/pets`, {
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json',
-      },
+    const response = await fetch(`https://cors-anywhere.herokuapp.com/${baseURL}/pets`, {
       method: 'post',
       body: JSON.stringify(pet)
     });

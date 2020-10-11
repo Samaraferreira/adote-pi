@@ -24,7 +24,7 @@ import ListPets from '../ListPets';
 import './styles.css';
 
 function Home() {
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState('dog');
 
   return (
     <React.Fragment>

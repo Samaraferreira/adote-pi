@@ -18,6 +18,8 @@ function Modal() {
   const [type, setType] = useState('dog');
   const [age, setAge] = useState('6 meses');
   const [sex, setSex] = useState('macho');
+  const [latitude, setLatitude] = useState(2535);
+  const [longitude, setLongitude] = useState(36366);
 
   const preview = useMemo(() => {
     return avatar ? URL.createObjectURL(avatar) : avatarImage;
@@ -35,6 +37,8 @@ function Modal() {
       data.append('type', type);
       data.append('age', age);
       data.append('sex', sex);
+      data.append('latitude', latitude);
+      data.append('longitude', longitude);
 
       await createPet(data);
     }

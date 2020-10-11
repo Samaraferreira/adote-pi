@@ -3,10 +3,6 @@
   padding: 0;
 }
 
-.container-devs {
-  padding: 20px;
-}
-
 .devs {
   display: flex;
   flex-wrap: wrap;
