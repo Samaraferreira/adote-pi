@@ -25,7 +25,7 @@ function ListPets({ category }) {
   return (
     <React.Fragment>
       <HeaderWithSubHeader />
-      <main className="container">
+      <main>
         <Card pets={pets} loading={loading} />
       </main>
     </React.Fragment>
