@@ -59,7 +59,7 @@ function Header() {
   const classes = useStyle();
   const { setOpenModal } = useContext(ModalContext);
   function handleClick () {
-    window.location.href = "http://localhost:3000/";
+    window.location.href = "https://adote.vercel.app/";
   } 
 
     return (
