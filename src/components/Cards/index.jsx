@@ -26,11 +26,14 @@ const useStyles = makeStyles({
     flexWrap:'wrap',
     justifyContent:'center',
   },
+
   root: {
-    maxWidth: '300px',
+    width: '300px',
     marginTop:'40px',
     margin: '8px',
+    boxShadow: '0px 4px 8px rgba(119, 119, 119, 0.25)'
   },
+
   ButtonContato: {
     textTransform:'none',
     background:'var(--gradient)',
@@ -38,7 +41,9 @@ const useStyles = makeStyles({
     borderRadius: 4,
     color: 'white',
     fontWeight:'500',
-    width:'100%'
+    fontSize: '16px',
+    width:'100%',
+    height: '46px'
   }
 });
 
@@ -85,17 +90,16 @@ export default function Cards({ pets, loading }) {
                         </Link>
                       </Typography>
                     </CardContent>
+
                   </CardActionArea>
-                  <CardActions>
-                    <Button onClick={() => handleWhatsapp(pet.whatsapp)} className={classes.ButtonContato} variant="contained" startIcon={<WhatsAppIcon />}>
-                      Entrar em contato
-                    </Button>
-                  </CardActions>
+                  <Button onClick={() => handleWhatsapp(pet.whatsapp)} className={classes.ButtonContato} variant="contained" startIcon={<WhatsAppIcon />}>
+                    Entrar em contato
+                  </Button>
                 </Card>
             )))
             : (
               <div className="container-info">
-                <img src={IconPet} alt="pet" />
+                <img src={IconPet} alt="pet" width="24px" />
                 <h3>Nenhum pet nesta categoria</h3>
               </div>
             )

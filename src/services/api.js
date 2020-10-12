@@ -1,10 +1,15 @@
-const baseURL = 'https://api-adote-pets.herokuapp.com';
+import axios from 'axios';
+
+export const api = axios.create({
+  baseURL: 'https://api-adote-pets.herokuapp.com',
+});
 
 export const getPetsByCategory = async (category) => {
   try {
-    const response = await fetch(`${baseURL}/pets?type=${category}`);
+    console.log(category)
+    const response = await api.get(`pets?type=${category}`);
 
-    return response.json();
+    return response.data;
   } catch (err) {
     console.log(err)
   }
@@ -12,13 +17,9 @@ export const getPetsByCategory = async (category) => {
 
 export const createPet = async (pet) => {
   try {
-    const response = await fetch(`https://cors-anywhere.herokuapp.com/${baseURL}/pets`, {
-      method: 'post',
-      body: JSON.stringify(pet)
-    });
+    await api.post('pets', pet);
 
-    console.log(response.json())
-    return response.json();
+    return;
   } catch (err) {
     console.log(err)
   }
