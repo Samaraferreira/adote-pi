@@ -52,6 +52,8 @@ export default function Cards({ pets, loading }) {
   const { setOpenMapModal, setSelectedPet } = useContext(ModalContext);
 
   function handleWhatsapp(phone) {
+    let link = `https://api.whatsapp.com/send?phone=${phone}`;
+    window.open(link,'_black');
   }
 
   function handleSelectPet(pet) {
