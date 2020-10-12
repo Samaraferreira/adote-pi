@@ -1,23 +1,26 @@
 import React, { useContext } from "react";
+import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import { makeStyles } from "@material-ui/core/styles";
+import { Button } from "@material-ui/core";
+import WhatsAppIcon from "@material-ui/icons/WhatsApp";
+
 import { ModalContext } from "../../App";
 
 import "./styles.css";
-import { Button } from "@material-ui/core";
-import HeaderWithX from "../HeaderWithX";
-import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 
-import WhatsAppIcon from "@material-ui/icons/WhatsApp";
+import HeaderWithX from "../HeaderWithX";
 
 const useStyles = makeStyles({
   ButtonContato: {
-    textTransform: "none",
-    background: "var(--gradient)",
+    textTransform:'none',
+    background:'var(--gradient)',
     border: 0,
     borderRadius: 4,
-    color: "white",
-    fontWeight: "500",
-    width: "100%",
+    color: 'white',
+    fontWeight:'500',
+    fontSize: '16px',
+    width:'100%',
+    height: '46px'
   },
 });
 
@@ -57,16 +60,16 @@ function ModalMap() {
         ) : (
           ""
         )}
-      </div>
-      <div className="Botao">
-        <Button
-          onClick={() => handleWhatsapp(selectedPet.whatsapp)}
-          className={classes.ButtonContato}
-          variant="contained"
-          startIcon={<WhatsAppIcon />}
-        >
-          Entrar em contato
-        </Button>
+        <div className="btn">
+          <Button
+            onClick={() => handleWhatsapp(selectedPet.whatsapp)}
+            className={classes.ButtonContato}
+            variant="contained"
+            startIcon={<WhatsAppIcon />}
+          >
+            Entrar em contato
+          </Button>
+        </div>
       </div>
     </div>
   );

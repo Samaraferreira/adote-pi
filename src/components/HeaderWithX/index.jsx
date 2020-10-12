@@ -21,7 +21,7 @@ const useStyle = makeStyles((theme) => ({
     paddingTop: '23px',
     marginLeft: 'auto',
     marginRight: 'auto',
-    paddingBottom: '23px',
+    paddingBottom: '16px',
     paddingLeft: '24px',
     paddingRight: '24px',
     alignItems: 'center',
@@ -43,20 +43,18 @@ const useStyle = makeStyles((theme) => ({
 function HeaderWithX({ close }) {
     const classes = useStyle();
     return (
-      <React.Fragment>
-        <Box className={classes.HeaderWithX}>
-          <Box className={classes.adoteContainer}>
-              <Typography className={classes.textHeaderWithX}>
-                  Adote
-              </Typography>
-              <Typography className={classes.textHeaderWithX} style={{color:'#7ADDDD'}}>.</Typography>
-          </Box>
-          {/* <i className="material-icons">CloseIcon</i> */}
-          <button onClick={() => close(false)} className="btn-close">
-            <img src={closeIcon} alt="fechar"/>
-          </button>
+      <Box className={classes.HeaderWithX}>
+        <Box className={classes.adoteContainer}>
+            <Typography className={classes.textHeaderWithX}>
+                Adote
+            </Typography>
+            <Typography className={classes.textHeaderWithX} style={{color:'#7ADDDD'}}>.</Typography>
         </Box>
-      </React.Fragment>
+        {/* <i className="material-icons">CloseIcon</i> */}
+        <button onClick={() => close(false)} className="btn-close">
+          <img src={closeIcon} alt="fechar"/>
+        </button>
+      </Box>
     );
 }
 
