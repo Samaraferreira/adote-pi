@@ -50,6 +50,7 @@ const useStyle = makeStyles((theme) => ({
   adoteContainer: {
       display:'flex',
       direction: 'row',
+      cursor:'pointer',
   }
 }));
 
@@ -57,10 +58,13 @@ const useStyle = makeStyles((theme) => ({
 function Header() {
   const classes = useStyle();
   const { setOpenModal } = useContext(ModalContext);
+  function handleClick () {
+    window.location.href = "http://localhost:3000/";
+  } 
 
     return (
         <Box className={classes.headerContainer}>
-            <Box className={classes.adoteContainer}>
+            <Box className={classes.adoteContainer} onClick={() => handleClick()}>
                 <Typography className={classes.textHeader}>
                     Adote
                 </Typography>
