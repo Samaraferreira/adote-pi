@@ -36,17 +36,10 @@ function ModalMap() {
     <div className={`janelaModal ${openMapModal && "modal-map-active"} `}>
       <HeaderWithX close={setOpenMapModal} />
       <div className="info">
-<<<<<<< HEAD
-        <h1>Localização do pet <span className="nomePet">{selectedPet.name}</span></h1>
-        <img className="maps"  src={mapa} alt="mapa" />
-        <button className="btn">
-          <img src={iwhatsapp} alt="Whatsapp" />
-          Entrar em Contato
-        </button>
-=======
         <h1>
           Localização do pet <span className="nomePet">{selectedPet.name}</span>
         </h1>
+
         {selectedPet.latitude ? (
           <Map center={[selectedPet.latitude, selectedPet.longitude]} zoom={12}>
             <TileLayer
@@ -74,7 +67,6 @@ function ModalMap() {
         >
           Entrar em contato
         </Button>
->>>>>>> 74b1aca5270f7664b313fede1ce8ed9912d37941
       </div>
     </div>
   );
