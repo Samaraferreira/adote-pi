@@ -75,16 +75,13 @@ export default function Cards({ pets, loading }) {
                       title={pet.type}
                     />
                     <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
+                      <Typography variant="h5" component="h2">
                         {pet.name}
                       </Typography>
-                      <Typography variant="body2" color="textSecondary" component="p">
-                        {pet.age}
+                      <Typography variant="subtitle1" color="textSecondary" component="p">
+                        {pet.age} - {pet.sex}
                       </Typography>
-                      <Typography variant="body2" color="textSecondary" component="p">
-                        {pet.sex}
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary" component="p">
+                      <Typography variant="subtitle1" color="textSecondary" component="p">
                         <Link onClick={() => handleSelectPet(pet)}>
                           Ver localização
                         </Link>

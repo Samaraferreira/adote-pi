@@ -17,12 +17,12 @@ function ModalMap() {
       <HeaderWithX close={setOpenMapModal} />
       <div className="info">
         <h1>Localização do pet <span className="nomePet">{selectedPet.name}</span></h1>
-        <img src={mapa} alt="mapa" />
-      </div>
-      <div className="Botao">
+        <img className="maps"  src={mapa} alt="mapa" />
+        <button className="btn">
           <img src={iwhatsapp} alt="Whatsapp" />
-          <p>Entrar em Contato</p>
-        </div>
+          Entrar em Contato
+        </button>
+      </div>
     </div>
   );
 }

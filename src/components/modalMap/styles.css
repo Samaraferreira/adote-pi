@@ -41,36 +41,36 @@
   color: #AAE8E8;
 }
 
-.info img{
-  width: 70%;
-  margin: 15px 0;
+.maps {
+  margin-top: 40px;
+  width: 90%;
 }
 
-.Botao{
+.btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  height: 40px;
-  margin: 0 auto;
+  width: 300px;
+  height: 52px;
+  border: 0;
+  margin: 48px 0;
   border-radius: 8px;
   background-image: linear-gradient( to right, #8BE2A6, #5BD7E7 );
-}
-
-.Botao img{
-  margin-right: 8px;
-}
-
-.Botao p{
   font-weight: 600;
   color: white;
+  font-size: 16px;
+}
+
+.btn img {
+  width: 24px;
+  margin-right: 8px;
 }
 
 @media (min-width: 600px) {
   .janelaModal {
     width: 600px;
-    height: 80vh;
-    top: 12%;
+    height: 90vh;
+    top: 6%;
     left: -50%;
     right: -50%;
   }
