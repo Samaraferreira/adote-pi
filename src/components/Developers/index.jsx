@@ -35,7 +35,7 @@ function Devs() {
               <h3>Leonardo</h3>
               <div className="redes">
                   <a href="https://github.com/leorjr" target="_blanck"><img src={github} alt="GitHub" /></a>
-                  <a href="#" target="_blanck"><img src={linkedin} alt="LinkedIn" /></a>
+                  <a href="https://www.linkedin.com/in/leonardo-rodrigues-656ba5111" target="_blanck"><img src={linkedin} alt="LinkedIn" /></a>
               </div>
           </div>
           <div className="cardDev">

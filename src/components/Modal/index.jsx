@@ -61,6 +61,14 @@ function Modal() {
       data.append('longitude', longitude);
 
       await createPet(data);
+
+      setName('');
+      setWhatsapp('55 (  )     -    ');
+      setAvatar(null);
+      setType('');
+      setSex('');
+
+      alert('Pet registrado com sucesso!')
     }
   }
 
