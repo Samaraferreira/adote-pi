@@ -90,7 +90,7 @@ export default function FormattedInputs({name, whatsapp, handleNameChange, handl
         type="text"
         InputProps={{
           startAdornment: (
-              <i className="material-icons" style={{color: '#49B7C6', marginRight: '10px'}} >pets</i>
+              <i className="material-icons" style={{color: '#DBDDDE', marginRight: '10px'}} >pets</i>
           )
         }}
         value={name}

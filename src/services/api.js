@@ -6,7 +6,6 @@ export const api = axios.create({
 
 export const getPetsByCategory = async (category) => {
   try {
-    console.log(category)
     const response = await api.get(`pets?type=${category}`);
 
     return response.data;

@@ -38,9 +38,9 @@ export default function Categories({type, age, sex, handleTypeChange, handleSubC
             <em>Selecione</em>
           </MenuItem>
           <MenuItem value={'dog'}>Cachorro</MenuItem>
-          <MenuItem value={'cat'}>Gatos</MenuItem>
-          <MenuItem value={'bird'}>Pássaros</MenuItem>
-          <MenuItem value={'others'}>Outros</MenuItem>
+          <MenuItem value={'cat'}>Gato</MenuItem>
+          <MenuItem value={'bird'}>Pássaro</MenuItem>
+          <MenuItem value={'other'}>Outro</MenuItem>
         </Select>
       </FormControl>
 

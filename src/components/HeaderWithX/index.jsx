@@ -2,12 +2,10 @@ import React from 'react';
 import 'fontsource-roboto';
 import {
     Typography,
-    makeStyles, Box, Divider
+    makeStyles, Box
 } from '@material-ui/core';
 
 import closeIcon from '../../assets/icons/icon-close.svg';
-
-//import { findByLabelText } from '@testing-library/react';
 
 const useStyle = makeStyles((theme) => ({
 

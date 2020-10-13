@@ -23,7 +23,8 @@ const useStyles = makeStyles({
     color: 'white',
     fontWeight:'500',
     width: '100%',
-    height: '40px',
+    height: '46px',
+    fontSize: '16px',
   }
 });
 
@@ -69,7 +70,6 @@ function Modal() {
   });
 
   const handleWhatsappChange = React.useCallback((event) => {
-    console.log(event.target.value);
     setWhatsapp(
        event.target.value
     );
@@ -106,18 +106,13 @@ function Modal() {
   return (
 
     <section className={`modal-container ${openModal && 'modal-active' } `} >
-      {/* <header className="modal-header">
-        <h2>Cadastrar novo pet</h2>
-        <button onClick={() => setOpenModal(false)} className="btn-close">
-          <img src={closeIcon} alt="fechar"/>
-        </button>
-      </header> */}
       <HeaderWithX close={setOpenModal} />
-      <main >
+      <main className="modal-content">
         <form onSubmit={handleNewPet}>
           <Box >
             <div id="input-file">
-              <span
+              <label
+                htmlFor="file"
                 className="avatar-image"
                 style={{ backgroundImage: `url(${preview})` }}
               />
@@ -149,7 +144,7 @@ function Modal() {
               handlePeriodChange={handlePeriodChange}
             />
             {/* MAPA */}
-            <button  type="submit" className={classes.ButtonContato} >
+            <button  type="submit" onClick={handleNewPet} className={classes.ButtonContato} >
               Adicionar
             </button>
           </Box>
