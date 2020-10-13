@@ -1,6 +1,9 @@
 import React, { useState, useContext, useMemo }  from 'react';
+import { Map, TileLayer, Marker } from "react-leaflet";
+import FormLabel from '@material-ui/core/FormLabel';
+
 import { makeStyles } from "@material-ui/core/styles";
-import { Button, Box } from '@material-ui/core/';
+import { Box } from '@material-ui/core/';
 
 import { createPet } from '../../services/api';
 
@@ -8,7 +11,6 @@ import { ModalContext } from '../../App';
 import HeaderWithX from '../HeaderWithX';
 
 import avatarImage from '../../assets/thumb.svg';
-import closeIcon from '../../assets/icons/icon-close.svg';
 import FormattedInputs from '../FormattedInputs';
 import Categories from '../Categories';
 
@@ -36,8 +38,9 @@ function Modal() {
   const [type, setType] = useState('');
   const [age, setAge] = useState({number: 0, period: 'meses'});
   const [sex, setSex] = useState('femea');
-  const [latitude, setLatitude] = useState(2535);
-  const [longitude, setLongitude] = useState(36366);
+  const [latitude, setLatitude] = useState(0);
+  const [longitude, setLongitude] = useState(0);
+  const [initialPosition, setInitialPosition] = useState([-22.5305742, -50.8801226]);
 
   const preview = useMemo(() => {
     return avatar ? URL.createObjectURL(avatar) : avatarImage;
@@ -103,6 +106,11 @@ function Modal() {
     });
   };
 
+  function handleMapClick(event) {
+    setLatitude(event.latlng.lat);
+    setLongitude(event.latlng.lng)
+  }
+
   return (
 
     <section className={`modal-container ${openModal && 'modal-active' } `} >
@@ -143,7 +151,17 @@ function Modal() {
               handleSexChange={handleSexChange}
               handlePeriodChange={handlePeriodChange}
             />
-            {/* MAPA */}
+
+            <FormLabel component="legend">Localização (selecione no mapa)</FormLabel>
+            <Map center={initialPosition} zoom={8} onClick={handleMapClick}>
+              {/* <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+              /> */}
+              <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+              <Marker position={[latitude, longitude]} />
+            </Map>
+
             <button  type="submit" onClick={handleNewPet} className={classes.ButtonContato} >
               Adicionar
             </button>
