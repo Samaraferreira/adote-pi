@@ -1,24 +1,11 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import { InputLabel, Box} from '@material-ui/core/';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import FormControl from '@material-ui/core/FormControl';
 import AgeGender from '../AgeGender';
+import useStyles from './styles';
 
-const useStyles = makeStyles((theme) => ({
-  formControl: {
-    //margin: theme.spacing(1),
-    minWidth: 120,
-  },
-  selectEmpty: {
-    marginTop: theme.spacing(2),
-  },
-  boxContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-  }
-}));
 
 export default function Categories({type, age, sex, handleTypeChange, handleSubClick, handleAddClick, handleSexChange, handlePeriodChange}) {
   const classes = useStyles();

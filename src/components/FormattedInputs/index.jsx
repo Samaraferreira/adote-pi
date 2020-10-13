@@ -2,21 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import MaskedTextField from "react-text-mask";
 // import NumberFormat from "react-number-format";
-import { makeStyles } from "@material-ui/core/styles";
 import { TextField, Input } from "@material-ui/core/";
 import FormControl from "@material-ui/core/FormControl";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& > *": {
-      //marginTop: theme.spacing(4),
-    },
-  },
-  textFieldStyle: {
-    width: '100%',
-    marginBottom: theme.spacing(3),
-  }
-}));
+import useStyles from "./styles";
 
 function TextMaskCustom(props) {
   const { inputRef, ...other } = props;
