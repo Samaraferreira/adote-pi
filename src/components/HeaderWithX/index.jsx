@@ -1,42 +1,12 @@
 import React from 'react';
 import 'fontsource-roboto';
 import {
-    Typography,
-    makeStyles, Box
+    Typography, Box
 } from '@material-ui/core';
+import useStyle from './styles';
 
 import closeIcon from '../../assets/icons/icon-close.svg';
 
-const useStyle = makeStyles((theme) => ({
-
-  HeaderWithX: {
-    maxWidth:'1100px',
-    display: 'flex',
-    direction:'row',
-    fontFamily: 'Roboto',
-    fontStyle: 'normal',
-    justifyContent: 'space-between',
-    paddingTop: '23px',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    paddingBottom: '16px',
-    paddingLeft: '24px',
-    paddingRight: '24px',
-    alignItems: 'center',
-  },
-
-  textHeaderWithX: {
-    fontWeight: 'bold',
-      fontSize: '28px',
-      lineHeight: '33px',
-      color: '#555',
-  },
-
-  adoteContainer: {
-    display:'flex',
-    direction: 'row',
-}
-}));
 
 function HeaderWithX({ close }) {
     const classes = useStyle();
