@@ -154,11 +154,11 @@ function Modal() {
 
             <FormLabel component="legend">Localização (selecione no mapa)</FormLabel>
             <Map center={initialPosition} zoom={8} onClick={handleMapClick}>
-              {/* <TileLayer
+              <TileLayer
+                attribution='&copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-              /> */}
-              <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+              />
+              {/* <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" /> */}
               <Marker position={[latitude, longitude]} />
             </Map>
 
