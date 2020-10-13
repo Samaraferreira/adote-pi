@@ -24,9 +24,8 @@ function Modal() {
   const [type, setType] = useState('');
   const [age, setAge] = useState({number: 0, period: 'meses'});
   const [sex, setSex] = useState('femea');
-  const [latitude, setLatitude] = useState(0);
-  const [longitude, setLongitude] = useState(0);
-  const [initialPosition, setInitialPosition] = useState([-22.5305742, -50.8801226]);
+  const [latitude, setLatitude] = useState(-12.950258);
+  const [longitude, setLongitude] = useState(-49.984558);
 
   const preview = useMemo(() => {
     return avatar ? URL.createObjectURL(avatar) : avatarImage;
@@ -98,7 +97,6 @@ function Modal() {
   }
 
   return (
-
     <section className={`modal-container ${openModal && 'modal-active' } `} >
       <HeaderWithX close={setOpenModal} />
       <main className="modal-content">
@@ -139,14 +137,17 @@ function Modal() {
             />
 
             <FormLabel component="legend">Localização (selecione no mapa)</FormLabel>
-            <Map center={initialPosition} zoom={8} onClick={handleMapClick}>
-              <TileLayer
-                attribution='&copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
-              {/* <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" /> */}
-              <Marker position={[latitude, longitude]} />
-            </Map>
+            {latitude ? (
+              <Map center={[latitude, longitude]} zoom={5} onClick={handleMapClick}>
+                <TileLayer
+                  attribution='&copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                <Marker position={[latitude, longitude]} />
+              </Map>
+            ) : (
+                ""
+            )}
 
             <button  type="submit" onClick={handleNewPet} className={classes.ButtonContato} >
               Adicionar
