@@ -92,7 +92,7 @@ export default function AgeGender({age, sex, handleSubClick, handleAddClick, han
           <FormLabel component="legend">Sexo</FormLabel>
           <Box style={{width: '100%'}}>
             <RadioGroup row aria-label="gender" name="gender1" value={sex} style={{justifyContent: 'space-between'}} onChange={handleSexChange}>
-              <FormControlLabel value="femea" control={<Radio />} label="Fêmea" />
+              <FormControlLabel value="fêmea" control={<Radio />} label="Fêmea" />
               <FormControlLabel value="macho" control={<Radio />} label="Macho" />
             </RadioGroup>
           </Box>
