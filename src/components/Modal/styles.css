@@ -10,6 +10,8 @@
   opacity: 0;
   display: none;
   transition: opacity .6s;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .modal-active {
