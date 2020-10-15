@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const api = axios.create({
-  baseURL: 'https://api-adote-pets.herokuapp.com',
+  baseURL: process.env.REACT_APP_API,
 });
 
 export const getPetsByCategory = async (category) => {
